@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Health Survey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 60%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 192, 203, 0.479);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(14, 10, 10, 0.644);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        fieldset {
+            border: 1px solid #150909;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            background-color: #fce4ec72; /* Pink background color */
+        }
+        legend {
+            font-weight: bold;
+            color: #555;
+        }
+        label {
+            margin: 10px 0 5px;
+            color: #333;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group input[type="radio"] {
+            margin-right: 10px;
+        }
+        .form-group label {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #5cb85c;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Women's Health Survey for Teenagers</h1>
+        <form action="#" method="post">
+            <!-- Personal Information -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="13" max="19" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="contact">Contact Number:</label>
+                <input type="tel" id="contact" name="contact" required>
+            </fieldset>
+
+            <!-- Health Issues -->
+            <fieldset>
+                <legend>Health Issues</legend>
+                <label for="menstrual">Have you experienced any issues with your menstrual cycle?</label>
+                <select id="menstrual" name="menstrual">
+                    <option value="none">None</option>
+                    <option value="irregular">Irregular Periods</option>
+                    <option value="painful">Painful Periods</option>
+                    <option value="heavy">Heavy Bleeding</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="diet">Do you follow a specific diet? If yes, please specify:</label>
+                <textarea id="diet" name="diet"></textarea>
+
+                <label for="exercise">Do you engage in regular physical activity?</label>
+                <select id="exercise" name="exercise">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+
+                <label>Do you experience any of the following symptoms? (Select all that apply)</label>
+                <div class="form-group">
+                    <label><input type="checkbox" name="symptoms" value="fatigue"> Fatigue</label>
+                    <label><input type="checkbox" name="symptoms" value="headaches"> Headaches</label>
+                    <label><input type="checkbox" name="symptoms" value="mood_swings"> Mood Swings</label>
+                    <label><input type="checkbox" name="symptoms" value="weight_change"> Weight Changes</label>
+                    <label><input type="checkbox" name="symptoms" value="digestive_issues"> Digestive Issues</label>
+                </div>
+            </fieldset>
+
+            <!-- Sleep Patterns -->
+            <fieldset>
+                <legend>Sleep Patterns</legend>
+                <label for="sleep_hours">Average hours of sleep per night:</label>
+                <input type="number" id="sleep_hours" name="sleep_hours" min="1" max="24" required>
+
+                <label for="sleep_quality">How would you rate your sleep quality?</label>
+                <select id="sleep_quality" name="sleep_quality">
+                    <option value="excellent">Excellent</option>
+                    <option value="good">Good</option>
+                    <option value="fair">Fair</option>
+                    <option value="poor">Poor</option>
+                </select>
+            </fieldset>
+
+            <!-- Mental Health -->
+            <fieldset>
+                <legend>Mental Health</legend>
+                <label for="stress_level">On a scale of 1-10, how would you rate your stress level?</label>
+                <input type="number" id="stress_level" name="stress_level" min="1" max="10" required>
+
+                <label for="mental_health_concerns">Do you have any concerns about your mental health? If yes, please describe:</label>
+                <textarea id="mental_health_concerns" name="mental_health_concerns"></textarea>
+            </fieldset>
+
+            <!-- Medications -->
+            <fieldset>
+                <legend>Medications</legend>
+                <label for="medications">Are you currently taking any medications? If yes, please list them:</label>
+                <textarea id="medications" name="medications"></textarea>
+            </fieldset>
+
+            <!-- Additional Comments -->
+            <fieldset>
+                <legend>Additional Comments</legend>
+                <label for="comments">Please provide any additional information or concerns:</label>
+                <textarea id="comments" name="comments"></textarea>
+            </fieldset>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit Survey</button>
+        </form>
+    </div>
+</body>
+</html>
